@@ -7,6 +7,7 @@ import { logout } from '../redux/auth/actions';
 import RaisedButton from 'material-ui/RaisedButton';
 import Avatar from 'material-ui/Avatar';
 import './Profile.css';
+import Paper from 'material-ui/Paper';
 
 class Profile extends Component {
   render() {
@@ -30,7 +31,7 @@ class Profile extends Component {
 
     return (
       <Page>
-        <div class = "container">
+        <Paper class="container" zDepth={2}>
           <Avatar
             src={imageUrl}
             size={80}
@@ -44,7 +45,7 @@ class Profile extends Component {
             label="Sign Out"
             onClick={logout}
           />
-        </div>
+        </Paper>
       </Page>
     );
   }
