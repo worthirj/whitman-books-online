@@ -30,23 +30,31 @@ class Profile extends Component {
     }
 
     return (
-      <Page>
-        <Paper class="container" zDepth={2}>
-          <Avatar
-            src={imageUrl}
-            size={80}
-          />
-          <div class = "container_child">
-            <h1>{`${givenName} ${familyName}`}</h1>
-            <h3>{email}</h3>
-          </div>
-          <RaisedButton
-            style={ {float: 'right'} }
-            label="Sign Out"
-            onClick={logout}
-          />
-        </Paper>
-      </Page>
+      <div>
+        <div class="container">
+          <Paper zDepth={1} style={{width: '100%'}} class="container">
+            <div class="box">
+              <Avatar
+                class="picture"
+                src={imageUrl}
+              />
+            </div>
+            <div class="box">
+              <h1>{`${givenName} ${familyName}`}</h1>
+              <h3>{email}</h3>
+            </div>
+            <div class="box" style={ {float: 'right'}}>
+              <RaisedButton
+                style={ {float: 'right'}}
+                label="Sign Out"
+                onClick={logout}
+              />
+            </div>
+          </Paper>
+        </div>
+        <h1 class="listing-header">Your Listings</h1>
+        <p class="listing-header">Books you are selling go here.</p>
+      </div>
     );
   }
 }
