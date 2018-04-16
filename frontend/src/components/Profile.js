@@ -31,19 +31,19 @@ class Profile extends Component {
 
     return (
       <div>
-        <div class="container">
-          <Paper zDepth={1} style={{width: '100%'}} class="container">
-            <div class="box">
+        <div className="container">
+          <Paper zDepth={1} style={{width: '100%'}} className="container">
+            <div className="box">
               <Avatar
-                class="picture"
+                className="picture"
                 src={imageUrl}
               />
             </div>
-            <div class="box">
+            <div className="box">
               <h1>{`${givenName} ${familyName}`}</h1>
               <h3>{email}</h3>
             </div>
-            <div class="box" style={ {float: 'right'}}>
+            <div className="box" style={ {float: 'right'}}>
               <RaisedButton
                 style={ {float: 'right'}}
                 label="Sign Out"
@@ -52,8 +52,8 @@ class Profile extends Component {
             </div>
           </Paper>
         </div>
-        <h1 class="listing-header">Your Listings</h1>
-        <p class="listing-header">Books you are selling go here.</p>
+        <h1 className="listing-header">Your Listings</h1>
+        <p className="listing-header">Books you are selling go here.</p>
       </div>
     );
   }

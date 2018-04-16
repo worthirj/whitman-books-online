@@ -11,7 +11,7 @@ class BookItem extends Component {
 
     return (
       <Paper zDepth={1}>
-        <div class="book_container">
+        <div className="book_container">
           {//<img src={imageLinks.thumbnail} alt="picture of book" />}
           }
           <h3>{title}</h3>
