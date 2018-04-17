@@ -1,7 +1,9 @@
 const BOOK_DATA = {
   1234567890: {
     title: 'To Kill a Mockingbird',
+    thumbnail: 'https://images-na.ssl-images-amazon.com/images/I/51N5qVjuKAL._SX309_BO1,204,203,200_.jpg',
     author: 'Harper Lee',
+    ISBN: '9780061980268',
     listingIds: [
       '12345',
       '67890',
@@ -9,7 +11,9 @@ const BOOK_DATA = {
   },
   9876543210: {
     title: 'Gödel, Escher, Bach',
+    thumbnail: 'https://images-na.ssl-images-amazon.com/images/I/512BblrQFqL._SX327_BO1,204,203,200_.jpg',
     author: 'Douglas Hofstadter',
+    ISBN: '9780465026562',
     listingIds: [
       '24680',
     ],
