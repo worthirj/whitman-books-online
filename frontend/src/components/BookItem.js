@@ -12,17 +12,19 @@ class BookItem extends Component {
     const { title, authors, industryIdentifiers, listingIds, imageLinks } = this.props;
 
     return (
-      <Card>
+      <Card style={{'margin-bottom': '1vh'}}>
         <div className="book_container">
-          <img src={imageLinks.thumbnail} style={ {'padding-left': '10px', 'padding-top': '10px', width: '10%', height: '10%', } } alt="pic" />
+          <img src={imageLinks.thumbnail} style={ {'padding-left': '10px', 'padding-top': '10px', width: '15%', height: '10%', } } alt="pic" />
           <div className="info_box">
             <h2>{title}</h2>
             <h4>{authors}</h4>
           </div>
         </div>
         <CardHeader
+          subtitle={'View Listings'}
           actAsExpander={true}
           showExpandableButton={true}
+          style={{'text-align': 'right'}}
         />
         <ListingFeed expandable={true} listingIds={listingIds} />
       </Card>

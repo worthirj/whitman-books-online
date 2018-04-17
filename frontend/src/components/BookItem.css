@@ -8,5 +8,6 @@
 .info_box {
   display: flex;
   flex-direction: column;
-  padding-left: 1vw;
+  padding-left: 2vw;
+  padding-top: 1.5vh;
 }
