@@ -30,7 +30,6 @@ class BookItem extends Component {
       </Card>
     );
   }
-
 }
 
 export default BookItem;
