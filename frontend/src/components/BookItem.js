@@ -1,24 +1,33 @@
 import React, { Component } from 'react';
 import ListingFeed from './ListingFeed';
 import Paper from 'material-ui/Paper';
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
 import './BookItem.css';
 
 class BookItem extends Component {
 
   render() {
     console.log(this.props);
-    const { title, author, industryIdentifiers, listingIds, imageLinks } = this.props;
+    const { title, author, industryIdentifiers, listingIds, thumbnail } = this.props;
 
     return (
-      <Paper zDepth={1}>
+      <Card>
+
         <div className="book_container">
-          {//<img src={imageLinks.thumbnail} alt="picture of book" />}
-          }
-          <h3>{title}</h3>
-          <h4>{author}</h4>
+          <img src={thumbnail} style={ {'padding-left': '10px', 'padding-top': '10px', width: '10%', height: '10%', } } alt="pic" />
+          <div className="info_box">
+            <h3>{title}</h3>
+            <h4>{author}</h4>
+          </div>
+
         </div>
+        <CardHeader
+          actAsExpander={true}
+          showExpandableButton={true}
+        />
         <ListingFeed listingIds={listingIds} />
-      </Paper>
+      </Card>
     );
   }
 
