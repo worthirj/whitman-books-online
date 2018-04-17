@@ -9,24 +9,22 @@ class BookItem extends Component {
 
   render() {
     console.log(this.props);
-    const { title, author, industryIdentifiers, listingIds, thumbnail } = this.props;
+    const { title, authors, industryIdentifiers, listingIds, imageLinks } = this.props;
 
     return (
       <Card>
-
         <div className="book_container">
-          <img src={thumbnail} style={ {'padding-left': '10px', 'padding-top': '10px', width: '10%', height: '10%', } } alt="pic" />
+          <img src={imageLinks.thumbnail} style={ {'padding-left': '10px', 'padding-top': '10px', width: '10%', height: '10%', } } alt="pic" />
           <div className="info_box">
-            <h3>{title}</h3>
-            <h4>{author}</h4>
+            <h2>{title}</h2>
+            <h4>{authors}</h4>
           </div>
-
         </div>
         <CardHeader
           actAsExpander={true}
           showExpandableButton={true}
         />
-        <ListingFeed listingIds={listingIds} />
+        <ListingFeed expandable={true} listingIds={listingIds} />
       </Card>
     );
   }

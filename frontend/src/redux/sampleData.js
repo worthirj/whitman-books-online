@@ -1,14 +1,5 @@
 const BOOK_DATA = {
   1234567890: {
-<<<<<<< HEAD
-    title: 'To Kill a Mockingbird',
-    thumbnail: 'https://images-na.ssl-images-amazon.com/images/I/51N5qVjuKAL._SX309_BO1,204,203,200_.jpg',
-    author: 'Harper Lee',
-    ISBN: '9780061980268',
-    listingIds: [
-      '12345',
-      '67890',
-=======
     title: 'Gödel, Escher, Bach',
     subtitle: 'An Eternal Golden Braid',
     authors: [
@@ -33,7 +24,6 @@ const BOOK_DATA = {
     printType: 'BOOK',
     categories: [
       'Artificial intelligence',
->>>>>>> 9c7463e5e358cb20024635fa0be7de9c2c2da1e1
     ],
     averageRating: 4.5,
     ratingsCount: 43,
@@ -51,14 +41,6 @@ const BOOK_DATA = {
     listingIds: ['12345abcdef', '67890ghijkl'],
   },
   9876543210: {
-<<<<<<< HEAD
-    title: 'Gödel, Escher, Bach',
-    thumbnail: 'https://images-na.ssl-images-amazon.com/images/I/512BblrQFqL._SX327_BO1,204,203,200_.jpg',
-    author: 'Douglas Hofstadter',
-    ISBN: '9780465026562',
-    listingIds: [
-      '24680',
-=======
     title: 'Moby Dick; Or, the Whale',
     subtitle: 'Moby-Dick: Or. the Whale',
     authors: [
@@ -75,7 +57,6 @@ const BOOK_DATA = {
         type: 'ISBN_13',
         identifier: '9781974305032',
       }
->>>>>>> 9c7463e5e358cb20024635fa0be7de9c2c2da1e1
     ],
     readingModes: {
       text: false,
@@ -89,6 +70,10 @@ const BOOK_DATA = {
     panelizationSummary: {
       containsEpubBubbles: false,
       containsImageBubbles: false,
+    },
+    imageLinks: {
+      smallThumbnail: 'http://books.google.com/books/content?id=Lps7PgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api',
+      thumbnail: 'https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.liquorature.com%2Fwp-content%2Fuploads%2F2013%2F03%2FMoby-Dick.jpg&f=1'
     },
     language: 'en',
     previewLink: 'http://books.google.com/books?id=olHntAEACAAJ&dq=isbn:9781974305032&hl=&cd=1&source=gbs_api',
