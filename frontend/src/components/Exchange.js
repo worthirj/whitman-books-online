@@ -15,6 +15,7 @@ class Exchange extends Component {
           <img src={logo} style={ {'paddingLeft': '10px', width: '10%', height: '10%' }} alt='logo'/>
           <h1 style={{'paddingBottom':'2vh', paddingLeft:'1vw'}}>Exchange</h1>
         </div>
+        <hr style={{'marginBottom': '2vh'}}/>
         <Search />
         <br />
         <SortField />

@@ -12,6 +12,9 @@ import authReducer from '../redux/auth/reducer';
 import { Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import './Sell.css'
+import logo from './logo.png';
+
 
 
 class Sell extends Component {
@@ -129,7 +132,10 @@ class Sell extends Component {
 
     return (
       <Page>
-        <h1> Sell your book:</h1>
+        <div className='sellheader'>
+          <img src={logo} style={ {'paddingLeft': '10px', width: '10%', height: '10%' }} alt='logo'/>
+          <h1 style={{'font-family':'helvetica', 'paddingBottom':'2vh', paddingLeft:'1vw'}}> Sell your book:</h1>
+        </div>
         <TextField
           floatingLabelText="Input your book's ISBN here:"
           value={this.state.isbnValue}
