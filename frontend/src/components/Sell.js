@@ -136,22 +136,27 @@ class Sell extends Component {
           <img src={logo} style={ {'paddingLeft': '10px', width: '10%', height: '10%' }} alt='logo'/>
           <h1 style={{'font-family':'helvetica', 'paddingBottom':'2vh', paddingLeft:'1vw'}}> Sell your book:</h1>
         </div>
-        <TextField
-          floatingLabelText="Input your book's ISBN here:"
-          value={this.state.isbnValue}
-          errorText={this.state.isbnError}
-          onChange={this.handleIsbnChange}
-          errorStyle={{
-            float: 'left',
-          }}
-        />
+        <div style={{'paddingLeft':'2vw'}}>
+        <div style={{display:'flex', 'flex-direction':'row', 'align-items':'flex-end', 'paddingBottom':'2vh'}} >
+          <TextField
 
-        <FlatButton
-          primary
-          label="Confirm"
-          onClick={this.handleIsbnClick}
-          disabled={this.state.isbnButtonDisabled}
-        />
+            floatingLabelText="&nbsp;Input ISBN here:"
+            value={this.state.isbnValue}
+            errorText={this.state.isbnError}
+            onChange={this.handleIsbnChange}
+            errorStyle={{
+              float: 'left',
+            }}
+          />
+          <div style={{'paddingLeft':'2vw'}}>
+            <FlatButton
+              primary
+              label="Confirm"
+              onClick={this.handleIsbnClick}
+              disabled={this.state.isbnButtonDisabled}
+            />
+          </div>
+        </div>
 
         {loading &&
           <Loader />
@@ -191,7 +196,7 @@ class Sell extends Component {
 
             <br />
 
-            $
+            $&nbsp;
             <TextField
               floatingLabelText="Input your desired price:"
               value={this.state.price}
@@ -209,6 +214,7 @@ class Sell extends Component {
             />
           </div>
         }
+      </div>
       </Page>
     );
   }
