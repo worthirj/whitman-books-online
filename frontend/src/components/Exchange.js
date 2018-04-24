@@ -9,7 +9,7 @@ class Exchange extends Component {
   render() {
     return (
       <Page>
-        <h1>Exchange</h1>
+        <h1 style={{'paddingBottom':'2vh'}}>Exchange</h1>
         <Search />
         <br />
         <SortField />
