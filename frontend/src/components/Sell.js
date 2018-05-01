@@ -77,6 +77,7 @@ class Sell extends Component {
     }
   }
 
+
   handleIsbnClick = (e) => {
     e.preventDefault();
     this.setState({ loading: true });
@@ -93,6 +94,20 @@ class Sell extends Component {
       }
     });
   }
+
+  handleIsbnEnterKey = (e) => {
+    // console.log(`Pressed keyCode ${ev.key}`);
+    if (e.key === 'Enter' && this.state.isbnButtonDisabled === false) {
+      this.handleIsbnClick(e);
+    }
+  }
+
+  handlePriceEnterKey = (e) => {
+    if (e.key === 'Enter' && this.state.priceButtonDisabled === false) {
+      this.handleSubmitClick(e);
+    }
+  }
+
 
   handleSubmitClick = (e) => {
     e.preventDefault();
@@ -132,31 +147,24 @@ class Sell extends Component {
 
     return (
       <Page>
-        <div className='sellheader'>
-          <img src={logo} style={ {'paddingLeft': '10px', width: '10%', height: '10%' }} alt='logo'/>
-          <h1 style={{'font-family':'helvetica', 'paddingBottom':'2vh', paddingLeft:'1vw'}}> Sell your book:</h1>
-        </div>
-        <div style={{'paddingLeft':'2vw'}}>
-        <div style={{display:'flex', 'flex-direction':'row', 'align-items':'flex-end', 'paddingBottom':'2vh'}} >
-          <TextField
+        <h1> Sell your book:</h1>
+        <TextField
+          floatingLabelText="Input your book's ISBN here:"
+          value={this.state.isbnValue}
+          errorText={this.state.isbnError}
+          onChange={this.handleIsbnChange}
+          onKeyPress={this.handleIsbnEnterKey}
+          errorStyle={{
+            float: 'left',
+          }}
+        />
 
-            floatingLabelText="&nbsp;Input ISBN here:"
-            value={this.state.isbnValue}
-            errorText={this.state.isbnError}
-            onChange={this.handleIsbnChange}
-            errorStyle={{
-              float: 'left',
-            }}
-          />
-          <div style={{'paddingLeft':'2vw'}}>
-            <FlatButton
-              primary
-              label="Confirm"
-              onClick={this.handleIsbnClick}
-              disabled={this.state.isbnButtonDisabled}
-            />
-          </div>
-        </div>
+        <FlatButton
+          primary
+          label="Confirm"
+          onClick={this.handleIsbnClick}
+          disabled={this.state.isbnButtonDisabled}
+        />
 
         {loading &&
           <Loader />
@@ -201,6 +209,7 @@ class Sell extends Component {
               floatingLabelText="Input your desired price:"
               value={this.state.price}
               onChange={this.handlePriceChange}
+              onKeyPress={this.handlePriceEnterKey}
               errorText={this.state.priceError}
               errorStyle={{
                 float: 'left',
@@ -214,7 +223,6 @@ class Sell extends Component {
             />
           </div>
         }
-      </div>
       </Page>
     );
   }
